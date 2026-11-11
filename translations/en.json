@@ -1,0 +1,143 @@
+{
+  "bad_json": "sparkDash returned invalid JSON",
+  "bad_token": "Access token must be a single line",
+  "bad_url": "sparkDash URL must start with http:// or https://",
+  "copied": "Copied {name}. Paste it into Machine in plugin settings.",
+  "copy_failed": "Could not copy the machine name",
+  "counter_line": "{running} running · {queued} queued · {status}",
+  "counters": {
+    "cpu": "CPU temperature",
+    "gpu": "GPU usage",
+    "memory": "Memory",
+    "power": "GPU power",
+    "prefill": "Prefill",
+    "queue": "Queue",
+    "temp": "GPU temperature",
+    "tps": "Decode",
+    "vram": "VRAM"
+  },
+  "disk": "Disk",
+  "graph": {
+    "cpu": "CPU",
+    "decode": "Decode",
+    "gpu": "GPU",
+    "gpu_load": "GPU load",
+    "memory": "Memory",
+    "memory_short": "Mem",
+    "peak": "Peak {values}",
+    "power": "Power",
+    "prefill": "Prefill",
+    "temperature": "Temperature",
+    "throughput": "Throughput",
+    "title": "History · last {window}",
+    "usage": "Usage",
+    "vram": "VRAM"
+  },
+  "http_error": "sparkDash returned HTTP {status}",
+  "loading": "Loading sparkDash…",
+  "machine": "Machine",
+  "machines": "Machines",
+  "machines_hint": "Click a machine to copy its name, then set Machine in plugin settings.",
+  "no_machine": "Set a machine name, id, or LAN IP in plugin settings",
+  "not_found": "No machine matches \"{machine}\"",
+  "offline": "Offline",
+  "offline_reason": "Offline: {reason}",
+  "offline_short": "off",
+  "online": "Online",
+  "open_dashboard": "Open sparkDash",
+  "open_failed": "Could not open sparkDash in a browser",
+  "open_settings": "Plugin settings",
+  "queued": "Queued",
+  "role": "Role",
+  "role_head": "Head",
+  "role_line": "{status} · {role}",
+  "role_worker": "Worker",
+  "running": "Running",
+  "settings": {
+    "machine": {
+      "description": "Name, id, or LAN IP of the machine to show. Any value you set here is used as-is, matched without regard to case.",
+      "label": "Machine"
+    },
+    "refresh_interval": {
+      "description": "Seconds between polls of sparkDash (2–120).",
+      "label": "Refresh interval"
+    },
+    "show_cpu": {
+      "description": "Show the CPU temperature on the bar.",
+      "label": "CPU temperature"
+    },
+    "show_gpu": {
+      "description": "Show GPU utilization on the bar.",
+      "label": "GPU usage"
+    },
+    "show_memory": {
+      "description": "Show unified memory, or system RAM when unified memory is not reported.",
+      "label": "Memory"
+    },
+    "show_power": {
+      "description": "Show GPU power draw on the bar.",
+      "label": "GPU power"
+    },
+    "show_prefill": {
+      "description": "Show the prefill rate, summed across available LLM engines.",
+      "label": "Prefill rate"
+    },
+    "show_queue": {
+      "description": "Show running/queued work on the bar.",
+      "label": "Queue"
+    },
+    "show_temp": {
+      "description": "Show the GPU temperature on the bar.",
+      "label": "GPU temperature"
+    },
+    "show_tps": {
+      "description": "Show the decode rate (generation tokens per second), summed across available LLM engines.",
+      "label": "Tokens per second"
+    },
+    "show_vram": {
+      "description": "Show VRAM used as a percentage of total.",
+      "label": "VRAM"
+    },
+    "source": {
+      "description": "Which queues feed the running/queued counter.",
+      "label": "Queue source",
+      "options": {
+        "both": "LLM requests and ComfyUI jobs",
+        "comfy": "ComfyUI jobs",
+        "llm": "LLM requests"
+      }
+    },
+    "token": {
+      "description": "Bearer token from the sparkDash host (SPARKDASH_TOKEN). Leave empty only if this server does not require one.",
+      "label": "Access token"
+    },
+    "url": {
+      "description": "sparkDash address. A page URL such as http://host:5555/cost is accepted; only the host and port are used.",
+      "label": "sparkDash URL"
+    }
+  },
+  "services": "Services",
+  "stats": {
+    "context": "Context",
+    "decode": "Decode",
+    "e2e": "E2E p95",
+    "itl": "ITL p95",
+    "kv_cache": "KV cache",
+    "per_stream": "Per stream",
+    "prefill": "Prefill",
+    "prefix_hit": "Prefix hit",
+    "queue": "Running/queued",
+    "slots": "Slots",
+    "tokens": "Tokens",
+    "ttft": "TTFT"
+  },
+  "status": "Status",
+  "title": "sparkDash",
+  "unauthorized": "sparkDash rejected the access token",
+  "unconfigured": "Set the sparkDash URL in plugin settings",
+  "unified_memory": "Unified memory",
+  "updated": "Updated {time}",
+  "uptime": "up {time}",
+  "worker_of": "Worker of {name}",
+  "workers": "Workers"
+}

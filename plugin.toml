@@ -1,0 +1,132 @@
+id = "fragosoSH/sparkdash"
+name = "sparkDash"
+version = "1.4.0"
+plugin_api = 26
+author = "fragosoSH"
+license = "MIT"
+icon = "bolt"
+description = "Queue, tokens per second, temperature, and other live readings from one sparkDash machine, including the workers of a head."
+tags = ["hardware", "indicator", "bar", "panel", "service"]
+
+# Shared by the poller, the bar widget, and the panel.
+[[setting]]
+key = "url"
+type = "string"
+label_key = "settings.url.label"
+description_key = "settings.url.description"
+default = ""
+
+[[setting]]
+key = "token"
+type = "string"
+label_key = "settings.token.label"
+description_key = "settings.token.description"
+default = ""
+
+[[setting]]
+key = "machine"
+type = "string"
+label_key = "settings.machine.label"
+description_key = "settings.machine.description"
+default = ""
+
+[[setting]]
+key = "source"
+type = "select"
+label_key = "settings.source.label"
+description_key = "settings.source.description"
+default = "both"
+options = [
+  { value = "llm", label_key = "settings.source.options.llm" },
+  { value = "comfy", label_key = "settings.source.options.comfy" },
+  { value = "both", label_key = "settings.source.options.both" },
+]
+
+# Any combination of these can be on. The bar shows the enabled ones, in this order.
+[[setting]]
+key = "show_queue"
+type = "bool"
+label_key = "settings.show_queue.label"
+description_key = "settings.show_queue.description"
+default = true
+
+[[setting]]
+key = "show_tps"
+type = "bool"
+label_key = "settings.show_tps.label"
+description_key = "settings.show_tps.description"
+default = true
+
+[[setting]]
+key = "show_prefill"
+type = "bool"
+label_key = "settings.show_prefill.label"
+description_key = "settings.show_prefill.description"
+default = false
+
+[[setting]]
+key = "show_temp"
+type = "bool"
+label_key = "settings.show_temp.label"
+description_key = "settings.show_temp.description"
+default = true
+
+[[setting]]
+key = "show_cpu"
+type = "bool"
+label_key = "settings.show_cpu.label"
+description_key = "settings.show_cpu.description"
+default = false
+
+[[setting]]
+key = "show_gpu"
+type = "bool"
+label_key = "settings.show_gpu.label"
+description_key = "settings.show_gpu.description"
+default = false
+
+[[setting]]
+key = "show_power"
+type = "bool"
+label_key = "settings.show_power.label"
+description_key = "settings.show_power.description"
+default = false
+
+[[setting]]
+key = "show_vram"
+type = "bool"
+label_key = "settings.show_vram.label"
+description_key = "settings.show_vram.description"
+default = false
+
+[[setting]]
+key = "show_memory"
+type = "bool"
+label_key = "settings.show_memory.label"
+description_key = "settings.show_memory.description"
+default = false
+
+[[setting]]
+key = "refresh_interval"
+type = "int"
+label_key = "settings.refresh_interval.label"
+description_key = "settings.refresh_interval.description"
+default = 5
+min = 2
+max = 120
+
+[[service]]
+id = "sync"
+entry = "service.luau"
+
+[[widget]]
+id = "queue"
+entry = "widget.luau"
+
+[[panel]]
+id = "status"
+entry = "panel.luau"
+width = 560
+height = 780
+placement = "floating"
+position = "center"
