@@ -45,9 +45,14 @@ The plugin reads `GET /api/sparks` for the machine list, then `GET /api/sparks/{
 
 Add the **queue** widget from the Add-widget picker, or set a bar entry to `fragosoSH/sparkdash:queue`.
 
-Point a Noctalia path source at the parent of this directory (it must contain a `sparkdash/` folder):
+## Install
+
+Clone the repo and point a Noctalia path source at the clone. The plugin is in its `sparkdash/` folder:
 
 ```
-noctalia msg plugins source add sparkdash path /path/to/sparkDash-plugin
+git clone https://github.com/fragosoSH/sparkdash-plugin.git
+noctalia msg plugins source add sparkdash path "$PWD/sparkdash-plugin"
 noctalia msg plugins enable fragosoSH/sparkdash
 ```
+
+To update, run `git pull` in the clone.
